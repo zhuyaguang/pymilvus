@@ -10,6 +10,7 @@ valid_index_types = [
     # "IVF_SQ8_HYBRID",
     "IVF_PQ",
     "HNSW",
+    "NANG",
     # "NSG",
     "ANNOY",
     "RHNSW_FLAT",
@@ -26,7 +27,17 @@ valid_index_params_keys = [
     "M",
     "efConstruction",
     "PQM",
-    "n_trees"
+    "n_trees",
+    "K",
+    "L",
+    "iter",
+    "S",
+    "R",
+    "RANGE",
+    "PL",
+    "B",
+    "M_NANG",
+    "search_L"
 ]
 
 valid_binary_index_types = [

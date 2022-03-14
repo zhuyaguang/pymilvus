@@ -230,6 +230,7 @@ def is_legal_index_metric_type(index_type: str, metric_type: str) -> bool:
                           # "IVF_SQ8_HYBRID",
                           "IVF_PQ",
                           "HNSW",
+                          "NANG",
                           # "NSG",
                           "ANNOY",
                           "RHNSW_FLAT",

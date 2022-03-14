@@ -97,7 +97,7 @@ print(" > There are {} films in collection `{}` after flush".format(after_flush_
 #     older index will be replaced by new one.
 # ------
 client.create_index(collection_name, "embedding",
-                    {"index_type": "IVF_FLAT", "metric_type": "L2", "params": {"nlist": 100}})
+                    {"index_type": "NANG", "metric_type": "L2", "params": {"K": 200, "L": 220,"iter": 12, "S": 25,"R": 200, "RANGE": 40,"PL": 50,"B": 0.6, "M_NANG": 0.6, "search_L": 10}})
 
 # ------
 # Basic create index:

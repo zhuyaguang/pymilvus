@@ -32,6 +32,7 @@ all_index_types = [
     # "IVF_SQ8_HYBRID",
     "IVF_PQ",
     "HNSW",
+    "NANG",
     # "NSG",
     "ANNOY",
     "RHNSW_FLAT",

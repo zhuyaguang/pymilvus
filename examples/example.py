@@ -1,10 +1,9 @@
 import random
-
 from pymilvus import (
     connections,
+    utility,
     FieldSchema, CollectionSchema, DataType,
     Collection,
-    utility
 )
 
 # This example shows how to:
@@ -15,7 +14,7 @@ from pymilvus import (
 #   5. search
 
 
-_HOST = '127.0.0.1'
+_HOST = '10.101.4.13'
 _PORT = '19530'
 
 # Const names
@@ -24,14 +23,14 @@ _ID_FIELD_NAME = 'id_field'
 _VECTOR_FIELD_NAME = 'float_vector_field'
 
 # Vector parameters
-_DIM = 128
+_DIM = 8
 _INDEX_FILE_SIZE = 32  # max file size of stored index
 
 # Index parameters
 _METRIC_TYPE = 'L2'
-_INDEX_TYPE = 'IVF_FLAT'
+_INDEX_TYPE = 'NANG'
 _NLIST = 1024
-_NPROBE = 16
+_NPROBE = 10
 _TOPK = 3
 
 
@@ -88,7 +87,7 @@ def get_entity_num(collection):
 def create_index(collection, filed_name):
     index_param = {
         "index_type": _INDEX_TYPE,
-        "params": {"nlist": _NLIST},
+        "params": {"K": 200, "L": 220,"iter": 12, "S": 25,"R": 200, "RANGE": 40,"PL": 50,"B": 0.6, "M_NANG": 0.6, "search_L": 10},
         "metric_type": _METRIC_TYPE}
     collection.create_index(filed_name, index_param)
     print("\nCreated index:\n{}".format(collection.index().params))

@@ -567,6 +567,13 @@ class Milvus:
                     "params": {"M": 48, "efConstruction": 50}
                 }`
 
+            NANG:
+                `{
+                    "metric_type": "L2",
+                    "index_type": "HNSW",
+                    "params": {"K": 200, "L": 220,"iter": 12, "S": 25,"R": 200, "RANGE": 40,"PL": 50,"B": 0.6, "M_NANG": 0.6, "search_L": 10}
+                }`
+
             RHNSW_FLAT:
                 `{
                     "metric_type": "L2",
